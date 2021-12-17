@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        value: {
+            type: DataTypes.REAL,
+            allowNull: true
+        },
     }, {
         underscored: true,
     });
