@@ -10,13 +10,15 @@ module.exports = {
             console.log('erro');
         }
     },
+
     async newPost(req, res){
+        const url = req.file.filename
         try{
-            const {description, image, value, userId} = req.body
+            const {description, value, userId} = req.body
             const post = await connection.posts.create(
                 {
                     description: description,
-                    image: image,
+                    image: url,
                     userId: userId,
                     value: value
                 }

@@ -1,13 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const multerConfig = require('./config/multer');
 
 const UsersController = require('./controllers/UsersController');
 const AuthController = require('./controllers/AuthController');
 const PostController = require('./controllers/PostController');
 
-router.post('/users.create', UsersController.createUser)
+//login
 router.post('/login', AuthController.login)
-router.post('/newPost', PostController.newPost)
-router.get('/posts', PostController.index)
+
+//users
+router.post('/users.create', UsersController.createUser)
+
+
+//posts
+router.get('/posts.list', PostController.index)
+// router.post('/posts.create', PostController.newPost)
+router.post('/posts.create', multer(multerConfig).single('file'), (req, res) => {
+    PostController.newPost(req, res)
+})
 
 module.exports = router;
