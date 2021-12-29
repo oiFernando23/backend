@@ -12,7 +12,12 @@ module.exports = {
     },
 
     async newPost(req, res){
-        const url = req.file.filename
+        var url = ""
+
+        if(req.file){
+            url = req.file.location
+        }
+        
         try{
             const {description, value, userId} = req.body
             const post = await connection.posts.create(
@@ -25,8 +30,7 @@ module.exports = {
             )
             res.json(post)
         } catch(error){
-            res.send("Erro")
-            console.log(error)
+            res.status(500).send(new Error(error))
         }
     }
 }
