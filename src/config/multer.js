@@ -21,10 +21,10 @@ const storageTypes = {
         }}),
     s3: multerS3({
         s3: new aws.S3({
-            secretAccessKey: 'PhyBCh1jLiHy+Se47uBVZe8/YYkale0Naw5Bm2jp',
-            accessKeyId: 'AKIA4R66WC6XOIZC374M',
+            secretAccessKey: '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',
+            accessKeyId: 'AKIA6EV7VTM66JHW4XWM',
         }),
-        bucket: 'mybodymyart',
+        bucket: 'mybodymyart2',
         contentType: multerS3.AUTO_CONTENT_TYPE,
         acl: 'public-read',
         key: (req, file, cb) => {

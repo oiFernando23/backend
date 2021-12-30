@@ -21,4 +21,6 @@ router.post('/posts.create', multer(multerConfig).single('file'), (req, res) => 
     PostController.newPost(req, res)
 })
 
+router.get('/users.list/:id', UsersController.listUser)
+
 module.exports = router;
