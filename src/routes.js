@@ -23,4 +23,6 @@ router.post('/posts.create', multer(multerConfig).single('file'), (req, res) => 
 
 router.get('/users.list/:id', UsersController.listUser)
 
+router.delete('/posts.delete/:id', PostController.deletePost)
+
 module.exports = router;
