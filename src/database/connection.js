@@ -1,8 +1,8 @@
 const { Sequelize } = require('sequelize');
 
 //database', 'username', 'password'
-const sequelize = new Sequelize('MyBodyMyArt', 'postgres', '1234', {
-    host: 'localhost',
+const sequelize = new Sequelize('d93gdakedvror9', 'postgres', '6c9c0467498c768e58a8a9297912e4d6c1e9e7733d1e26fa1d1e71d4be4a01ba', {
+    host: 'ec2-54-83-152-251.compute-1.amazonaws.com',
     dialect: 'postgres'
 });
 
