@@ -17,9 +17,9 @@ db.posts = require('./models/Posts')(sequelize, Sequelize);
 db.users.hasMany(db.posts);
 db.posts.belongsTo(db.users);
 
-// sequelize.sync({
-//     alter: true
-// })
+sequelize.sync({
+    alter: true
+})
 
 db.sequelize.authenticate().then(() => {
     console.log("Banco conectado com sucesso :)");
