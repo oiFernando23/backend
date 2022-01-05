@@ -25,4 +25,8 @@ router.get('/users.list/:id', UsersController.listUser)
 
 router.delete('/posts.delete/:id', PostController.deletePost)
 
+router.post('/users.rate/:id', UsersController.rateUser)
+
+router.get('/users.search/:username', UsersController.searchUser)
+
 module.exports = router;

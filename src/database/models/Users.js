@@ -24,6 +24,22 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        cidade:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        estado:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        rate:{
+            type: DataTypes.DOUBLE,
+            allowNull:false
+        },
+        cont:{
+            type: DataTypes.DOUBLE,
+            allowNull:false
+        }
     }, {
         underscored: true,
     });
