@@ -41,7 +41,7 @@ module.exports = {
                     password: bcrypt.hashSync(password, 10),
                     cidade: cidade,
                     estado: estado,
-                    rate: 0,
+                    rate: 5,
                     cont: 0
                 }
             )
